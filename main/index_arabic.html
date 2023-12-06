@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="image/YoMoFo_Logo.jpg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YoMoFo</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon_ar.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap" rel="stylesheet">    
+    <style>
+      .animated {
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+      }
+
+      .animated-from-bottom {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+      }
+
+      .animated-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 991px) {
+      .about .about-content .image {
+        margin: 0 auto 60px;
+      }
+      .about .about-content .image::before,
+      .about .about-content .image::after {
+        display: block; 
+      }
+    }
+
+
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  filter: brightness(60%) blur(3px);
+  z-index: -2;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+
+
+
+.progress-container {
+            display: flex;
+            width: 100%;
+            position: relative; /* Ensure the element is positioned relative to its parent */
+            top: -04.2px;
+            z-index: -1;
+        }
+
+        .progress-bar {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #EDE7E3;
+            overflow: hidden;
+
+        }
+
+        .progress-bar1 {
+            height: 100%;
+            width: 0;
+            transition: width 0.6s;
+
+        }
+
+        .progress-bar1-green {
+            background-color: #16697A; /* Green color for the first progress bar */
+
+        }
+
+        .progress-bar1-blue {
+            background-color: #489FB5; /* Blue color for the second progress bar */
+        }
+
+        .progress-bar1-red {
+            background-color: #82C0CC; /* Red color for the third progress bar */
+
+        }
+
+    </style>
+  </head>
+<!-- For modern browsers -->
+<link rel="icon" href="image/layer-group-solid.svg" type="image/svg" sizes="32x32">
+<!-- For iOS devices -->
+<link rel="apple-touch-icon" href="image/layer-group-solid.svg">
+
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="image/Group jdjd1.png" alt="Logo">
+      </div>
+      <style>
+        /* Add a class to the <li> element */
+        .custom-cursor {
+          cursor: pointer; /* Change this to the desired cursor style */
+        }
+    
+        
+      </style>
+
+
+
+      <div class="nav">
+        <ul>
+          <li class="custom-cursor">
+            <div class="links">
+            <span class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <ul>
+              <li><a href="#services">خدمات</a></li>
+              <!-- <li><a href="#portfolio">ملف</a></li> -->
+              <li><a href="#Download">تحميل</a></li>
+              <li><a href="#about">عنا</a></li>
+              <li><a href="#Q&A">سؤال و جواب</a></li>
+              <li><a href="#contact">إتصال</a></li>
+            </ul>
+        </div></li>
+        <style>
+          /* Add a class to the <li> element */
+          .custom-cursor {
+            cursor: pointer; /* Change this to the desired cursor style */
+          }
+      
+          
+        </style>
+
+
+
+
+
+          <li class="custom-cursor">
+            <div class="links1">
+                <span class="icon1">
+                  <i class="fas fa-globe"></i>
+                </span>
+                <ul>
+                  <li><a class="language-button" id="en-button" >إنجليزي</a></li>
+                  <li><a class="language-button" id="fr-button" >فرنسي</a></li>
+                  <li><a  class="language-button" id="ar-button" >عربي</a></li>
+                </ul>
+              </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    <!-- End Header -->
+    <div class="progress-container">
+      <div class="progress-bar">
+          <div class="progress-bar1 progress-bar1-green" id="progress1"></div>
+      </div>
+      <div class="progress-bar">
+          <div class="progress-bar1 progress-bar1-blue" id="progress2"></div>
+      </div>
+      <div class="progress-bar">
+          <div class="progress-bar1 progress-bar1-red" id="progress3"></div>
+      </div>
+  </div>
+    <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="slideshow">
+        <img src="image/the-blur-one.jpg" alt="Slide 1" class="slide">
+        <img src="image/fikri-rasyid-ezeC8-clZSs-unsplash.jpg" alt="Slide 2" class="slide">
+        <img src="image/pexels-aleksandar-pasaric-3423860.jpg" alt="Slide 3" class="slide">
+      </div> 
+  
+      <div class="intro-text">
+        <h1>YoMoFo</h1>
+        <p>   تَسوُّق البقالة ، أَصبَح سهْلا . مَتْجَرك الشَّامل لِجميع اِحْتياجات البقالة الخاصَّة بِك</p>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+    <!-- Start Features -->
+    <div class="features">
+      <div class="container">
+        <div class="feat animated">
+          <i class="fas fa-shopping-cart fa-3x"></i>
+          <h3>تنوع</h3>
+          <p>يوموفو تقومَ بتقديمِ أجودِ المنتجاتِ والعروضِ الترويجيةِ المختلفةِ حسبَ المواسمِ والمناسباتِ</p>
+          </div>
+        <div class="feat animated">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h3>توصيل سريع</h3>
+          <p>رضا العملاءِ هوَ جوهرُ كلِ ما تقومُ بهِ يوموفو . لهذا نحرصُ على وصولِ الطلبيةِ في أسرعِ وقتٍ ممكنٍ</p>
+        </div>
+        <div class="feat animated">
+          <i class="fa fa-user-circle fa-3x"></i>
+          <h3>خدمة العملاء 24/7 </h3>
+          <p>فريقُ يوموفو متخصصونَ في خدمةِ العملاءِ على مدارِ 24 ساعةٍ في اليومِ ، 7 أيامٌ في الأسبوعِ لمساعدتكَ في أيِ استفساراتٍ أوْ مخاوفَ أوْ مشكلاتٍ قدْ تكونُ لديكَ</p>
+        </div>
+      </div>
+    </div>
+<!-- End Features -->
+<div class="span">
+  <span></span>
+</div>
+
+<!-- Start Services -->
+<div class="services" id="services">
+  <div class="container">
+    <h2 class="special-heading animated">خَدَمَاتٌ  </h2>
+    <p class="animated">لا تكن مشغولاً ، كن منتجاً</p>
+    <div class="services-content">
+      <div class="col">
+        <!-- Start Service -->
+        <div class="srv animated-from-bottom">
+          <i class="fa fa-wifi fa-2xl" style="color: #16697A;"></i>
+          <div class="text">
+            <h3>الطلب على الإنترنيت</h3>
+            <p>يتيح للمستخدمين تصفح كتالوج افتراضي لعناصر البقالة ، وإضافتها إلى سلة التسوق الخاصة بهم ، وتقديم طلب للتوصيل إلى المنزل أو الاستلام من متجر قريب </p>
+          </div>
+        </div>
+        <div class="srv animated-from-bottom">
+          <i class="fas fa-people-carry fa-2x"></i>
+          <div class="text">
+            <h3>خدمات توصيل</h3>
+            <p>يمكن أن يوفر تطبيق البقالة خدمات توصيل موثوقة وفعالة. بعد أن يضع المستخدمون طلباتهم </p>
+          </div>
+        </div>
+        <!-- End Service -->
+      </div>
+      <div class="col">
+
+        <!-- Start Services -->
+        <div class="srv animated-from-bottom">
+          <i class="fas fa-handshake fa-2xl" style="color:#16697A;"></i>
+          <div class="text">
+            <h3>توصيات شخصية</h3>
+            <p>باستخدام الخوارزميات المتقدمة وبيانات المستخدم ، يمكن لتطبيق البقالة تقديم توصيات منتجات مخصصة بناءً على مشتريات المستخدم السابقة </p>
+          </div>
+        </div>
+        <div class="srv animated-from-bottom">
+          <i class="fas fa-pencil-ruler fa-2x"></i>
+          <div class="text">
+            <h3>اقتراحات لتخطيط الوجبات والوصفات</h3>
+            <p>يمكن لتطبيق البقالة تقديم المساعدة في تخطيط الوجبات من خلال توفير الوصفات بناءً على تفضيلات المستخدم والمتطلبات الغذائية</p>
+          </div>
+        </div>
+        <!-- End Services -->
+      </div>
+      <div class="col">
+        <div class="image image-column">
+          <img decoding="async" src="image/eduardo-soares-QsYXYSwV3NU-unsplash.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Services -->
+<div class="span">
+  <span></span>
+</div>
+
+<!-- Start Portfolio -->
+<!-- <div class="portfolio" id="portfolio">
+  <div class="container">
+    <h2 class="special-heading animated">مِلَفّ  </h2>
+    <p class="animated">إذا فعلت ذلك بشكل صحيح ، فسوف يستمر إلى الأبد</p>
+    <div class="portfolio-content">
+      <div class="card portfolio-card animated-from-bottom">
+        <img decoding="async" src="image/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg" alt="" />
+        <div class="info">
+          <h3>Project Here</h3>
+          <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+        </div>
+      </div>
+      <div class="card portfolio-card animated-from-bottom">
+        <img decoding="async" src="image/pexels-aleksandar-pasaric-3423860.jpg" alt="" />
+        <div class="info">
+          <h3>Project Here</h3>
+          <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End Portfolio -->
+<div class="span">
+  <span></span>
+</div>
+
+<!-- Start Download -->
+<div class="Download" id="Download">
+  <div class="container">
+    <h2 class="special-heading animated">تَحْمِيل </h2>
+    <p class="animated">قم بتنزيله وجربه</p>
+    <div class="Download-content">
+      <div class="card animated-from-bottom">
+        <img decoding="async" src="image/image_processing20200831-18140-26f5yvhhhhhh.png" alt="" />
+      </div>
+      <div class="card animated-from-bottom">
+        <div class="info">
+          <h3>تحميل التطبيق</h3>
+          <p>يمكنك تنزيل تطبيق يوموفو من متجر جوجل للألعاب وبدء التسوق الأن</p>
+          <a href="https://play.google.com/store" class="google-play-button animated-from-bottom">
+            <span class="logo"></span>
+            <img decoding="async" src="image/google_play_icon-icons.com_72023.png" alt="" />
+            <span>GET IT ON &nbsp; Google Play</span>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Download -->
+
+<div class="span1">
+  <span></span>
+</div>
+    <!-- Start About -->
+    <div class="about" id="about">
+
+      <div class="container">
+        <h2 class="special-heading animated">عَنَّا </h2>
+        <p class="animated">القليل هو المزيد من العمل </p>
+        <div class="about-content">
+          <div class="image">
+            <img decoding="async" src="image/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg" alt="" />
+          </div>
+          <div class="text animated-from-bottom">
+            <p>
+              تقديم تطبيق البقالة النهائي ، الحل الشامل لجميع احتياجات تسوق البقالة في متناول يدك. من خلال تطبيقنا سهل الاستخدام والغني بالميزات ، لم يكن التسوق من البقالة أسهل أو أكثر راحة من أي وقت مضى
+            </p>
+            <hr />
+            <p>
+             تم تصميم تطبيق البقالة ليوفر لك تجربة تسوق سلسة وخالية من المتاعب. تصفح الكتالوج الشامل لدينا من المنتجات عالية الجودة ، بدءًا من المنتجات الطازجة وسلع المؤن إلى الضروريات المنزلية والعناصر المتخصصة. مع مجموعة واسعة من الخيارات المتاحة ، يمكنك بسهولة العثور على كل ما تحتاجه لتخزين مطبخك ومنزلك
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About -->
+    <!-- Start Q&A -->
+    <div class="span">
+      <span></span>
+    </div>
+<div class="Q&A" id="Q&A" style="background-color: #EDE7E3;">
+  <div class="container">
+    <h2 class="special-heading animated">Q&A</h2>
+    <p class="animated">Have questions? We have answers.</p>
+    <div class="qa-content">
+      <div class="qa-item">
+        <div class="question">السؤال 1: كيف يعمل توصيل يوموفو والاستلام على الرصيف؟</div>
+        <div class="answer">الإجابة 1: يسهّل عليك yomofo الطلب من المتاجر المفضلة لديك. <br>
+          تسوق للحصول على العناصر من المتاجر القريبة منك ، مع مجموعة متنوعة من بائعي التجزئة ومحلات البقالة المحليين الموثوق بهم في جميع أنحاء البلاد. <br>
+          بعد ذلك ، سيقوم yomofo بتوصيلك بمتسوق شخصي في منطقتك للتسوق وتوصيل طلبك. التسليم بدون تلامس متاح مع خيار "اترك على بابي". <br>
+         
+          يمكنك تتبع تقدم طلبك والتواصل مع المتسوق في كل خطوة على الطريق باستخدام تطبيق yomofo أو موقعنا الإلكتروني. <br>
+         
+          يقدم Yomofo أيضًا خدمة التوصيل من الرصيف في مواقع البيع بالتجزئة المختارة. ما عليك سوى تقديم طلبك واختيار وقت الاستلام ، وسيقوم المتسوق بإعداد طلبك في المتجر. <br>
+         
+          عندما تصل إلى المتجر ، استخدم تطبيق yomofo لإعلامنا. اعتمادًا على المتجر ، سيقوم المتسوق أو موظف المتجر بإحضار البقالة إلى سيارتك ، أو يمكنك استلامها في المنطقة المحددة.</div>
+      </div>
+      <div class="qa-item">
+        <div class="question">السؤال 2: ما هي تكلفة يوموفو؟</div>
+        <div class="answer">الإجابة الثانية: لا تحتاج إلى عضوية لتطلب من يوموفو. <br>
+
+          للبدء ، قم بإنشاء حساب ، وحدد المتجر الذي تريد التسوق فيه ، وقم بتقديم طلبك. قد يكون العملاء الجدد مؤهلين للحصول على العروض الترويجية للتوصيل المجاني. <br>
+         
+          التسليم: تبدأ الرسوم من 1.99 دولارًا للطلبات في نفس اليوم التي تزيد عن 35 دولارًا. تختلف الرسوم لعمليات التسليم التي تستغرق ساعة واحدة وتسليم متجر النادي والتسليمات التي تقل عن 35 دولارًا أمريكيًا. <br>
+         
+          الاستلام: قد تكون هناك "رسوم استلام" (تعادل رسوم التوصيل لطلبات الاستلام) على طلب الاستلام الخاص بك. <br>
+         
+          رسوم الخدمة: تختلف رسوم الخدمة وتخضع للتغيير بناءً على عوامل مثل الموقع وعدد العناصر وأنواعها في سلة التسوق الخاصة بك. <br>
+         
+          مع عضوية Yomofo + اختيارية ، يمكنك الحصول على 0 دولار كرسوم توصيل لكل طلب يزيد عن 43 دولارًا ورسوم خدمة أقل أيضًا.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">السؤال 3: هل سأدفع على يوموفو نفس السعر الذي سأدفعه في المتجر؟</div>
+        <div class="answer">الإجابة الثالثة: يحدد شركاء التجزئة أسعار السلع في سوق يوموفو. في حين أن العديد من بائعي التجزئة يقدمون أسعارًا يومية للمتاجر على yomofo ، قد يحدد بعض تجار التجزئة أسعارًا مختلفة على منصة yomofo عن الأسعار داخل المتجر. <br>
+
+          يمكنك عرض سياسات التسعير لكل بائع تجزئة على تطبيق وموقع يوموفو.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">السؤال 4: ماذا يحدث إذا نفد شيء ما وأحتاج إلى إعطاء تعليمات محددة؟</div>
+        <div class="answer">الإجابة 4: يسهل يوموفو التواصل مع المتسوق. عندما يكون العنصر الذي تريده غير متوفر في المتجر ، سيتبع المتسوق تفضيلاتك البديلة. <br>
+          يمكنك تعيين تعليمات العناصر والتسليم مسبقًا ، بالإضافة إلى الدردشة مباشرة مع المتسوق أثناء التسوق وتسليم العناصر الخاصة بك. يمكنك إخبار المتسوق بما يلي: <br>
+         
+          البحث عن أفضل تطابق: بشكل افتراضي ، سيستخدم المتسوق أفضل تقدير لديه لاختيار بديل لعنصرك. <br>
+         
+          اختر بديلاً محددًا: يمكنك اختيار بديل معين للمتسوق لشرائه إذا كان خيارك الأول غير متوفر. <br>
+         
+          لا تستبدل: بالنسبة إلى العناصر التي تفضل عدم استبدالها ، اختر "عدم استبدال" لاسترداد الأموال إذا كان العنصر غير متوفر. <br>
+         
+          يمكنك تحديث أو إلغاء طلبك طالما أن المتسوق لم يبدأ التسوق. إذا كنت بحاجة إلى إجراء تغييرات بعد بدء التسوق ، فيمكنك استخدام التطبيق أو موقع الويب للموافقة على البدائل أو الدردشة مع المتسوق.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">السؤال 5: ماذا يحدث إذا كانت هناك مشكلة في طلبي؟</div>
+        <div class="answer">الإجابة الخامسة: إذا كان هناك خطأ ما ، فلديك خيارات. في تطبيق أو موقع YoMoFo ، يمكنك الإبلاغ عن: <br>
+
+          العناصر المفقودة <br>
+         
+          عناصر غير صحيحة <br>
+         
+          العناصر التالفة <br>
+         
+          بدائل سيئة <br>
+         
+          الطلبات المبكرة / المتأخرة <br>
+         
+          إذا لم يأتِ أحد الطلبات مطلقًا ، أو تلقيت طلبًا من شخص آخر ، فيمكنك التواصل مع تجربة عملاء YoMoFo.
+          </div>
+      </div>
+      <!-- <div class="qa-item">
+        <div class="question">السؤال 6: هل يمكنني الحصول على توصيل بدون تلامس مع يوموفو؟</div>
+        <div class="answer">الإجابة السادسة: صحة وسلامة مجتمعنا هي أولويتنا الأولى. يسعدنا تقديم خدمة التوصيل بدون تلامس من خلال ميزة "إجازة عند بابي" الخاصة بنا. <br>
+
+          يمنحك التوصيل عند بابي المرونة في توصيل مشترياتك دون الحاجة إلى القدوم إلى الباب أو التواجد في المنزل. يمكنك ترك تعليمات التسليم للمتسوق عند السداد ، وسنخطرك عند وصول طلبك. <br>
+         
+          ترك الآن على بابي هو الإعداد الافتراضي لجميع عمليات تسليم YoMoFo. إذا كنت تفضل عدم استخدام هذه الميزة ، فما عليك سوى إلغاء تحديد المربع الذي يقول "اترك عند بابي إذا لم أكن موجودًا" عند الدفع.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">السؤال 7: هل يمكنني إرسال عضوية يوموفو + كبطاقة هدايا؟</div>
+        <div class="answer">الإجابة السابعة: - نعم! مع بطاقة إنستا + ، يحصل المستلم على توصيل مجاني ورسوم مخفضة على كل طلب. يمكنك إرسال بطاقة هدايا + بطاقة إنستا  لـ - <br>
+
+          • 3 أشهر - 19 دولارًا <br>
+         
+          • 6 أشهر - 39 دولارًا<br>
+         
+          • سنة واحدة - 69 دولارًا
+          </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End Q&A -->
+<div class="span">
+  <span></span>
+</div>
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <h2 class="special-heading animated">إتِّصَال </h2>
+        <div class="info animated-from-bottom">
+          <p class="label">         : لا تتردد في مراسلتنا على</p>
+          <a href="mailto:Yomofoplt@gmail.com?subject=Contact" class="link">Yomofoplt@gmail.com</a>
+          <div class="social">
+            <a href="https://www.tiktok.com/@yomofoteam">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100091925260698&mibextid=ZbWKwL">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/yomofo_algeria/">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/yomofozone?t=Uu37EVOsvJEFvSDt33elZw&s=09">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/yomofo/">
+              <i class="fab fa-linkedin"></i>
+
+
+            </a>
+            : تجدنا على الشبكات الاجتماعية
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact -->
+    <a href="#" id="back-to-top-button">↑</a>
+    <!-- Start Footer -->
+    <div class="footer">&copy; 2023 <span>YoMoFo</span> جميع الحقوق محفوظة</div>
+    <!-- End Footer -->
+    <script>
+      // Function to handle animations
+      function handleAnimations() {
+  const animatedElements = document.querySelectorAll('.animated');
+
+  animatedElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight * 0.8) {
+      element.classList.add('animated-visible');
+    } else {
+      element.classList.remove('animated-visible');
+    }
+  });
+
+  const animatedFromBottomElements = document.querySelectorAll('.animated-from-bottom');
+  animatedFromBottomElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight * 0.8) {
+      element.classList.add('animated-visible');
+    } else {
+      element.classList.remove('animated-visible');
+    }
+  });
+}
+
+// Event listener for scroll events
+window.addEventListener('scroll', handleAnimations);
+      // Add touch events for mobile devices
+      const portfolioCards = document.querySelectorAll('.portfolio-card');
+portfolioCards.forEach(card => {
+  card.addEventListener('touchstart', function () {
+    this.classList.add('touch-active');
+  });
+
+  card.addEventListener('touchend', function () {
+    this.classList.remove('touch-active');
+  });
+});
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+document.getElementById('back-to-top-button').style.display = 'block';
+} else {
+document.getElementById('back-to-top-button').style.display = 'none';
+}
+}
+
+document.getElementById('back-to-top-button').onclick = function() {
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+// Get references to the language buttons
+const enButton = document.getElementById('en-button');
+const arButton = document.getElementById('ar-button');
+const frButton = document.getElementById('fr-button');
+// Add event listeners to the buttons
+enButton.addEventListener('click', function() {
+window.location.href = 'index.html';
+});
+
+arButton.addEventListener('click', function() {
+window.location.href = 'index_arabic.html';
+});
+frButton.addEventListener('click', function() {
+window.location.href = 'index_francais.html';
+});
+document.addEventListener('DOMContentLoaded', function() {
+const qaItems = document.querySelectorAll('.qa-item');
+
+qaItems.forEach(item => {
+item.addEventListener('click', function() {
+this.classList.toggle('open');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(slideIndex) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[slideIndex].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    setTimeout(nextSlide, 6000); // Change slide every 3 seconds
+  }
+
+  // Start the slideshow
+  setTimeout(nextSlide, 0); // Start immediately
+});
+
+
+
+
+
+function animateProgress(progressElement, duration) {
+            return new Promise(resolve => {
+                let start = null;
+
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = Math.min((timestamp - start) / duration, 1);
+                    progressElement.style.width = progress * 100 + "%";
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        resolve();
+                    }
+                }
+
+                requestAnimationFrame(step);
+            });
+        }
+
+        async function startAnimation() {
+            const progress1 = document.getElementById('progress1');
+            const progress2 = document.getElementById('progress2');
+            const progress3 = document.getElementById('progress3');
+
+            await animateProgress(progress1, 6000); // Fill first progress bar in 6 seconds
+
+            await animateProgress(progress2, 6000); // Fill second progress bar in 6 seconds
+
+            await animateProgress(progress3, 6000); // Fill third progress bar in 6 seconds
+
+            progress1.style.transition = "none";
+            progress2.style.transition = "none";
+            progress3.style.transition = "none";
+
+            progress1.style.width = '0';
+            progress2.style.width = '0';
+            progress3.style.width = '0';
+
+            requestAnimationFrame(() => {
+                progress1.style.transition = "width 0s";
+                progress2.style.transition = "width 0s";
+                progress3.style.transition = "width 0s";
+                startAnimation(); // Restart the animation
+            });
+        }
+
+        startAnimation();
+
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="x-icon" href="image/YoMoFo_Logo.jpg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YoMoFo</title>
+    <!-- Main Template CSS File -->
+    <link rel="stylesheet" href="css/leon.css" />
+    <!-- Render All Elements Normally -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      .animated {
+        opacity: 0;
+        transition: opacity 0.5s ease-in;
+      }
+
+      .animated-from-bottom {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+      }
+
+      .animated-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 991px) {
+      .about .about-content .image {
+        margin: 0 auto 60px;
+      }
+      .about .about-content .image::before,
+      .about .about-content .image::after {
+        display: block; 
+      }
+    }
+
+
+.slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  filter: brightness(60%) blur(3px);
+  z-index: -2;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+
+
+
+
+.progress-container {
+            display: flex;
+            width: 100%;
+            position: relative; /* Ensure the element is positioned relative to its parent */
+            top: -04.2px;
+            z-index: -1;
+        }
+
+        .progress-bar {
+            flex-grow: 1;
+            height: 10px;
+            background-color: #EDE7E3;
+            overflow: hidden;
+
+        }
+
+        .progress-bar1 {
+            height: 100%;
+            width: 0;
+            transition: width 0.6s;
+
+        }
+
+        .progress-bar1-green {
+            background-color: #16697A; /* Green color for the first progress bar */
+
+        }
+
+        .progress-bar1-blue {
+            background-color: #489FB5; /* Blue color for the second progress bar */
+        }
+
+        .progress-bar1-red {
+            background-color: #82C0CC; /* Red color for the third progress bar */
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+  </head>
+<!-- For modern browsers -->
+<link rel="icon" href="image/layer-group-solid.svg" type="image/svg" sizes="32x32">
+<!-- For iOS devices -->
+<link rel="apple-touch-icon" href="image/layer-group-solid.svg">
+
+
+
+
+
+
+  <body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="image/Group jdjd1.png" alt="Logo">
+      </div>
+      <style>
+        /* Add a class to the <li> element */
+        .custom-cursor {
+          cursor: pointer; /* Change this to the desired cursor style */
+        }
+    
+        
+      </style>
+
+
+      <div class="nav">
+        <ul>
+          <li class="custom-cursor">
+            <div class="links">
+            <span class="icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <ul>
+              <li><a href="#services">Services</a></li>
+              <!-- <li><a href="#portfolio">Portfolio</a></li> -->
+              <li><a href="#Download">Download</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#Q&A">Q&A</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div></li>
+        <style>
+          /* Add a class to the <li> element */
+          .custom-cursor {
+            cursor: pointer; /* Change this to the desired cursor style */
+          }
+      
+          
+        </style>
+
+
+          <li class="custom-cursor">
+            <div class="links1">
+                <span class="icon1">
+                  <i class="fas fa-globe"></i>
+                </span>
+                <ul>
+                  <li><a class="language-button" id="en-button" >English</a></li>
+                  <li><a class="language-button" id="fr-button" >Francais</a></li>
+                  <li><a  class="language-button" id="ar-button" >Arabic</a></li>
+                </ul>
+              </div>
+        </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <!-- End Header -->
+    <div class="progress-container">
+      <div class="progress-bar">
+          <div class="progress-bar1 progress-bar1-green" id="progress1"></div>
+      </div>
+      <div class="progress-bar">
+          <div class="progress-bar1 progress-bar1-blue" id="progress2"></div>
+      </div>
+      <div class="progress-bar">
+          <div class="progress-bar1 progress-bar1-red" id="progress3"></div>
+      </div>
+  </div>
+    <!-- Start Landing Section -->
+    <div class="landing">
+      <div class="slideshow">
+        <img src="image/the-blur-one.jpg" alt="Slide 1" class="slide">
+        <img src="image/fikri-rasyid-ezeC8-clZSs-unsplash.jpg" alt="Slide 2" class="slide">
+        <img src="image/pexels-aleksandar-pasaric-3423860.jpg" alt="Slide 3" class="slide">
+      </div> 
+    <div class="language-buttons-container">
+    </div>   
+
+      <div class="intro-text">
+        <h1>YoMoFo</h1>
+        <p>Grocery shopping made easy. Your one-stop shop for all your grocery needs.</p>
+      </div>
+    </div>
+    <!-- End Landing Section -->
+
+    <!-- Start Features -->
+    <div class="features">
+      <div class="container">
+        <div class="feat animated">
+          <i class="fas fa-shopping-cart fa-3x"></i>
+          <h3>Variation</h3>
+          <p>Offer different products and promotions depending on the season.</p>
+        </div>
+        <div class="feat animated">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h3>Quick delivery</h3>
+          <p>Customer satisfaction is at the heart of everything we do. That's why we have a dedicated customer support team available to assist you with any queries or concerns you may have.</p>
+        </div>
+        <div class="feat animated">
+          <i class="fa fa-user-circle fa-3x"></i>
+          <h3>Client service 24/7</h3>
+          <p>Our dedicated team of customer service professionals is available 24 hours a day, 7 days a week to assist you with any inquiries, concerns, or issues you may have.</p>
+        </div>
+      </div>
+    </div>
+<!-- End Features -->
+<div class="span">
+  <span></span>
+</div>
+
+
+    <!-- Start Services -->
+    <div class="services" id="services">
+      <div class="container">
+        <h2 class="special-heading animated">Services</h2>
+        <p class="animated">Don't be busy, be productive</p>
+        <div class="services-content">
+          <div class="col">
+            <!-- Start Service -->
+            <div class="srv animated-from-bottom">
+              <i class="fa fa-wifi fa-2xl" style="color: #16697A;"></i>
+              <div class="text">
+                <h3>Online Ordering</h3>
+                <p>Allows users to browse through a virtual catalog of grocery items, add them to their cart, and place an order for home delivery or pickup at a nearby store.</p>
+              </div>
+            </div>
+            <div class="srv animated-from-bottom">
+              <i class="fas fa-people-carry fa-2x"></i>
+              <div class="text">
+                <h3>Delivery Services</h3>
+                <p>A grocery app can provide reliable and efficient delivery services. After users place their orders,</p>
+              </div>
+            </div>
+            <!-- End Service -->
+          </div>
+          <div class="col">
+            <!-- Start Services -->
+            <div class="srv animated-from-bottom">
+              <i class="fas fa-handshake fa-2xl" style="color:#16697A;"></i>
+              <div class="text">
+                <h3>Personalized Recommendations</h3>
+                <p>Using advanced algorithms and user data, a grocery app can offer personalized product recommendations based on the user's past purchases,</p>
+              </div>
+            </div>
+            <div class="srv animated-from-bottom">
+              <i class="fas fa-pencil-ruler fa-2x"></i>
+              <div class="text">
+                <h3>Meal Planning and Recipe Suggestions</h3>
+                <p>A grocery app can offer meal planning assistance by providing recipes based on user preferences and dietary requirements.</p>
+              </div>
+            </div>
+            <!-- End Services -->
+
+          </div>
+          <div class="col">
+            <div class="image image-column">
+              <img decoding="async" src="image/eduardo-soares-QsYXYSwV3NU-unsplash.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services -->
+    <div class="span">
+      <span></span>
+    </div>
+
+<!-- Start Portfolio -->
+<!-- <div class="portfolio" id="portfolio">
+  <div class="container">
+    <h2 class="special-heading animated">Portfolio</h2>
+    <p class="animated">If you do it right, it will last forever.</p>
+    <div class="portfolio-content">
+      <div class="card portfolio-card animated-from-bottom">
+        <img decoding="async" src="image/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg" alt="" />
+        <div class="info">
+          <h3>Project Here</h3>
+          <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+        </div>
+      </div>
+      <div class="card portfolio-card animated-from-bottom">
+        <img decoding="async" src="image/pexels-clem-onojeghuo-375897.jpg" alt="" />
+        <div class="info">
+          <h3>Project Here</h3>
+          <p>My creative ability is very difficult to measure because it can manifest in so many surprising and.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- End Portfolio -->
+<div class="span">
+  <span></span>
+</div>
+
+<!-- Start Download -->
+<div class="Download" id="Download">
+  <div class="container">
+    <h2 class="special-heading animated">Download</h2>
+    <p class="animated">Download and Try It.</p>
+    <div class="Download-content">
+      <div class="card animated-from-bottom">
+        <img decoding="async" src="image/image_processing20200831-18140-26f5yvhhhhhh.png" alt="" />
+      </div>
+      <div class="card animated-from-bottom">
+        <div class="info">
+          <h3>Download Application</h3>
+          <p>You can download YoMoFo app from Google Play and start shopping now.</p>
+          <a href="https://play.google.com/store" class="google-play-button animated-from-bottom">
+            <span class="logo"></span>
+            <img decoding="async" src="image/google_play_icon-icons.com_72023.png" alt="" />
+            <span>GET IT ON &nbsp; Google Play</span>
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Download -->
+
+
+    <!-- Start About -->
+    <div class="about" id="about">
+      <div class="span">
+        <span></span>
+      </div>
+      <div class="container">
+        <h2 class="special-heading animated">About</h2>
+        <p class="animated">Less is more work</p>
+        <div class="about-content">
+          <div class="image">
+            <img decoding="async" src="image/franki-chamaki-ivfp_yxZuYQ-unsplash.jpg" alt="" />
+          </div>
+          <div class="text animated-from-bottom">
+            <p>
+              Introducing the ultimate grocery app, your one-stop solution for all your grocery shopping needs right at your fingertips. With our user-friendly and feature-rich app, grocery shopping has never been easier or more convenient.
+            </p>
+            <hr />
+            <p>
+              The grocery app is designed to provide you with a seamless and hassle-free shopping experience. Browse through our extensive catalog of high-quality products, ranging from fresh produce and pantry staples to household essentials and specialty items. With a wide selection of options available, you can easily find everything you need to stock your kitchen and home.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End About -->
+    <div class="span">
+      <span></span>
+    </div>
+    
+<!-- Start Q&A -->
+<div class="Q&A" id="Q&A"style="background-color: #EDE7E3;">
+  <div class="container">
+    <h2 class="special-heading animated">Q&A</h2>
+    <p class="animated">Have questions? We have answers.</p>
+    <div class="qa-content">
+      <div class="qa-item">
+        <div class="question">Question 1: How does yomofo delivery and curbside pickup work?</div>
+        <div class="answer">Answer 1: yomofo makes it easy to order from your favorite stores. <br>
+          Shop for items from stores near you, with a variety of retailers and trusted local grocers across the country.<br>
+          Then, yomofo will connect you with a personal shopper in your area to shop and deliver your order. Contactless delivery is available with our “Leave at my door” option.<br>
+          
+          You can track your order’s progress and communicate with your shopper every step of the way using the yomofo app or our website.<br>
+          
+          Yomofo also offers curbside pickup at select retail locations. Simply place your order and choose a pickup time, and a shopper will prepare your order at the store.<br>
+          
+          When you get to the store, use the yomofo app to notify us. Depending on the store, a shopper or store employee will bring the groceries to your car, or you can pick them up at the designated area.</div>
+      </div>
+      <div class="qa-item">
+        <div class="question">Question 2: How much does yomofo cost?</div>
+        <div class="answer">Answer 2: You don’t need a membership to order with yomofo. <br>
+
+          To get started, create an account, select the store you want to shop, and place your order. New customers may be eligible for free delivery promotions.<br>
+          
+          Delivery: Fees start at $1.99 for same-day orders over $35. Fees vary for one-hour deliveries, club store deliveries, and deliveries under $35.<br>
+          
+          Pickup: There may be a “pickup fee” (equivalent to a delivery fee for pickup orders) on your pick up order.<br>
+          
+          Service fees: Service fees vary and are subject to change based on factors like location and the number and types of items in your cart.<br>
+          
+          With an optional Yomofo+ membership, you can get $0 delivery fee on every order over $43 and lower service fees too.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">Question 3: Will i pay the same price on yomofo as i would on store?</div>
+        <div class="answer">Answer 3: Retail partners set the prices of items on the yomofo marketplace. While many retailers offer everyday store prices on yomofo, some retailers may set prices on the yomofo platform that are different from in-store prices.<br>
+
+          You can view pricing policies for each retailer on the yomofo app and website.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">Question 4: What happens if something is out of stock and I need to give specific instructions?</div>
+        <div class="answer">Answer 4: YoMoFo makes it easy to communicate with your shopper. When an item you want is out-of-stock at the store, your shopper will follow your replacement preferences.<br>
+          You can set item and delivery instructions in advance, as well as chat directly with your shopper while they shop and deliver your items. You can tell the shopper to:<br>
+          
+          Find Best Match: By default, your shopper will use their best judgement to pick a replacement for your item.<br>
+          
+          Pick Specific Replacement: You can pick a specific alternative for the shopper to purchase if your first choice is out-of-stock.<br>
+          
+          Don’t Replace: For items you’d rather not replace, choose “Don’t replace” to get a refund if the item is out of stock.<br>
+          
+          You can update or cancel your order as long as your shopper hasn’t started shopping. If you need to make changes after shopping has started, you can use the app or website to approve replacements or chat with your shopper.
+          </div>
+      </div>
+      <div class="qa-item">
+        <div class="question">Question 5: What happens if there's an issue with my order?</div>
+        <div class="answer">Answer 5: If something isn’t right, you’ve got options. In the YoMoFo app or website, you can report:<br>
+
+          Missing items<br>
+          
+          Incorrect items<br>
+          
+          Damaged items<br>
+          
+          Poor replacements<br>
+          
+          Early/late orders<br>
+          
+          If an order never came, or you get someone else’s order, you can reach out to YoMoFo Customer Experience.
+          </div>
+      </div>
+      <!-- <div class="qa-item">
+        <div class="question">Question 6: Can I get contactless delivery with YoMoFo?</div>
+        <div class="answer">Answer 6: The health and safety of our community is our number one priority. We are excited to offer contactless delivery through our Leave at My Door delivery feature.<br>
+
+          Leave at My Door delivery gives you the flexibility to have your groceries delivered without having to come to the door or be at home. You can leave delivery instructions for your shopper at checkout, and we’ll notify you when your order arrives.<br>
+          
+          Leave at My Door is now the default setting for all YoMoFo deliveries. If you’d prefer to not use this feature, simply uncheck the box that says “Leave at my door if I’m not around” at checkout.
+          </div>
+      </div> -->
+
+      <!-- <div class="qa-item">
+        <div class="question">Question 7: Can i send an YoMoFo + membership as gift card?</div>
+        <div class="answer">Answer 7: -Yes! With Instacart+, your recipient gets free delivery and reduced fees on every order. You can send an Instacart+ Membership gift card for—<br>  
+
+          • 3 months - $19<br>
+          
+          • 6 months - $39<br>
+          
+          • 1 year   - $69
+          </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+<!-- End Q&A -->
+<div class="span">
+  <span></span>
+</div>
+    
+    
+    
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+      <div class="container">
+        <h2 class="special-heading animated">Contact</h2>
+        <div class="info animated-from-bottom">
+          <p class="label">Feel free to drop us a line at:</p>
+          <a href="mailto:Yomofoplt@gmail.com?subject=Contact" class="link">Yomofoplt@gmail.com</a>
+          <div class="social">
+            Find Us On Social Networks
+            <a href="https://www.tiktok.com/@yomofoteam">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100091925260698&mibextid=ZbWKwL">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/yomofo_algeria/">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/yomofozone?t=Uu37EVOsvJEFvSDt33elZw&s=09">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/yomofo/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact -->
+    <a href="#" id="back-to-top-button">↑</a>
+    <!-- Start Footer -->
+    <div class="footer">&copy; 2023 <span>YoMoFo</span> All Right Reserved</div>
+    <!-- End Footer -->
+    <script>
+      // Function to handle animations
+      function handleAnimations() {
+  const animatedElements = document.querySelectorAll('.animated');
+
+  animatedElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight * 0.8) {
+      element.classList.add('animated-visible');
+    } else {
+      element.classList.remove('animated-visible');
+    }
+  });
+
+  const animatedFromBottomElements = document.querySelectorAll('.animated-from-bottom');
+  animatedFromBottomElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight * 0.8) {
+      element.classList.add('animated-visible');
+    } else {
+      element.classList.remove('animated-visible');
+    }
+  });
+}
+
+// Event listener for scroll events
+window.addEventListener('scroll', handleAnimations);
+      // Add touch events for mobile devices
+      const portfolioCards = document.querySelectorAll('.portfolio-card');
+portfolioCards.forEach(card => {
+  card.addEventListener('touchstart', function () {
+    this.classList.add('touch-active');
+  });
+
+  card.addEventListener('touchend', function () {
+    this.classList.remove('touch-active');
+  });
+});
+window.onscroll = function() { scrollFunction() };
+
+function scrollFunction() {
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+document.getElementById('back-to-top-button').style.display = 'block';
+} else {
+document.getElementById('back-to-top-button').style.display = 'none';
+}
+}
+
+document.getElementById('back-to-top-button').onclick = function() {
+document.body.scrollTop = 0; // For Safari
+document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
+// Get references to the language buttons
+const enButton = document.getElementById('en-button');
+const arButton = document.getElementById('ar-button');
+const frButton = document.getElementById('fr-button');
+// Add event listeners to the buttons
+enButton.addEventListener('click', function() {
+window.location.href = 'index.html';
+});
+
+arButton.addEventListener('click', function() {
+window.location.href = 'index_arabic.html';
+});
+frButton.addEventListener('click', function() {
+window.location.href = 'index_francais.html';
+});
+document.addEventListener('DOMContentLoaded', function() {
+const qaItems = document.querySelectorAll('.qa-item');
+
+qaItems.forEach(item => {
+item.addEventListener('click', function() {
+this.classList.toggle('open');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(slideIndex) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[slideIndex].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+    setTimeout(nextSlide, 6000); // Change slide every 3 seconds
+  }
+
+  // Start the slideshow
+  setTimeout(nextSlide, 0); // Start immediately
+});
+
+
+
+
+
+function animateProgress(progressElement, duration) {
+            return new Promise(resolve => {
+                let start = null;
+
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    const progress = Math.min((timestamp - start) / duration, 1);
+                    progressElement.style.width = progress * 100 + "%";
+                    if (progress < 1) {
+                        requestAnimationFrame(step);
+                    } else {
+                        resolve();
+                    }
+                }
+
+                requestAnimationFrame(step);
+            });
+        }
+
+        async function startAnimation() {
+            const progress1 = document.getElementById('progress1');
+            const progress2 = document.getElementById('progress2');
+            const progress3 = document.getElementById('progress3');
+
+            await animateProgress(progress1, 6000); // Fill first progress bar in 6 seconds
+
+            await animateProgress(progress2, 6000); // Fill second progress bar in 6 seconds
+
+            await animateProgress(progress3, 6000); // Fill third progress bar in 6 seconds
+
+            progress1.style.transition = "none";
+            progress2.style.transition = "none";
+            progress3.style.transition = "none";
+
+            progress1.style.width = '0';
+            progress2.style.width = '0';
+            progress3.style.width = '0';
+
+            requestAnimationFrame(() => {
+                progress1.style.transition = "width 0s";
+                progress2.style.transition = "width 0s";
+                progress3.style.transition = "width 0s";
+                startAnimation(); // Restart the animation
+            });
+        }
+
+        startAnimation();
+
+
+</script>
+  </body>
+</html>
